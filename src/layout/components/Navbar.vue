@@ -1,9 +1,12 @@
 <template>
   <div class="navbar">
-    <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
+    <!-- <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
 
-    <breadcrumb class="breadcrumb-container" />
-
+    <breadcrumb class="breadcrumb-container" /> -->
+    <div class="logo">
+      <i class="el-icon-picture" />
+      安全距离计算公式
+    </div>
     <div class="right-menu">
       <el-dropdown class="avatar-container" trigger="click">
         <div class="avatar-wrapper">
@@ -33,13 +36,12 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import Breadcrumb from '@/components/Breadcrumb'
-import Hamburger from '@/components/Hamburger'
+// import Breadcrumb from '@/components/Breadcrumb'
+// import Hamburger from '@/components/Hamburger'
 
 export default {
   components: {
-    Breadcrumb,
-    Hamburger
+
   },
   computed: {
     ...mapGetters([
@@ -61,11 +63,22 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
-  height: 50px;
+  // width: calc(100% + 70px);
+  width: 100%;
+  height: 60px;
   overflow: hidden;
   position: relative;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0,21,41,.08);
+  .logo {
+     float: left;
+    padding: 0 20px;
+    line-height: 60px;
+    font-size: 20px;
+      .el-icon-picture {
+        margin-right: 10px;
+      }
+  }
 
   .hamburger-container {
     line-height: 46px;
@@ -85,9 +98,10 @@ export default {
   }
 
   .right-menu {
+    padding-right: 30px ;
     float: right;
     height: 100%;
-    line-height: 50px;
+    line-height: 60px;
 
     &:focus {
       outline: none;
@@ -129,7 +143,7 @@ export default {
           cursor: pointer;
           position: absolute;
           right: -20px;
-          top: 25px;
+          top: 30px;
           font-size: 12px;
         }
       }

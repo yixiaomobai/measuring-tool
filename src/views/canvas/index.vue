@@ -1,6 +1,6 @@
 <template>
-  <div class="dashboard-container">
-    <div class="dashboard-text">name: {{ name }}</div>
+  <div class="canvas-container">
+    <div class="canvas-text">name: {{ name }}</div>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  name: 'Dashboard',
+  name: 'Canvas',
   computed: {
     ...mapGetters([
       'name'
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.dashboard {
+.canvas {
   &-container {
     margin: 30px;
   }
